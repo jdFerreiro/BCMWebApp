@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.GrpAplired.BCMWeb">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="17" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.BATTERY_STATS" />
+  <application android:label="BCMWeb.Android" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <receiver android:enabled="true" android:exported="true" android:name="md5f4b04ce51e851d3e3b899c3b3577b6c9.DownloadCompletedBroadcastReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+      </intent-filter>
+    </receiver>
+    <receiver android:enabled="true" android:exported="false" android:name="md51558244f76c53b6aeda52c8a337f2c37.PowerSaveModeBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.GrpAplired.BCMWeb.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.GrpAplired.BCMWeb" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

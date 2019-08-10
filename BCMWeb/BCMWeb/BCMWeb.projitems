@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{900149A2-7583-4D75-9162-FFBAD4807DBD}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BCMWeb</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EventArgs\DeviceEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EventArgs\LoginModelEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIDeviceManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIDownloadPathService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIPAddressManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AuditoriaModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DispositivoModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DocumentoModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EmpresaModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GenericModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ModuloModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SelectionModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SharedModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TokenModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UsuarioModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EmpresaPage.xaml.cs">
+      <DependentUpon>EmpresaPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\exit 100x100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\exit 40x40.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\icono-pdf-def.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Splash 100x100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Splash 256x256.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Splash 40x40.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Splash 512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EmpresaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)app.config" />
+    <None Include="$(MSBuildThisFileDirectory)packages.config" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BCMWeb.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5">
+                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="8*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Image x:Name="imgLogo" Grid.Row="0" HorizontalOptions="Center" />
+                        <Label Text="BCMWeb" FontSize="Medium" Grid.Row="1" HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+                    </Grid>
+                    <Frame Grid.Column="1" Grid.Row="1" HorizontalOptions="CenterAndExpand" 
+                               VerticalOptions="Center" BackgroundColor="White" CornerRadius="10"
+                               OutlineColor="Black">
+                        <Frame.Content>
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+                                    <Label Text="Identificación del Usuario" FontSize="16" HorizontalTextAlignment="Center" 
+                                           VerticalTextAlignment="Center" />
+                                </StackLayout>
+                                <Label Text="Usuario:" Grid.Column="0" Grid.Row="2" FontSize="12" 
+                                       HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+                                <Entry Grid.Column="1" Grid.Row="2" Placeholder="Código de acceso" 
+                                       Text="{Binding Codigo}" x:Name="entUsuario" FontSize="12" 
+                                       HorizontalOptions="FillAndExpand" Keyboard="Email"/>
+                                <Label x:Name="lblErrorCodigo" Text="{Binding ErrorCodigo}" FontSize="12" 
+                                       TextColor="Red" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" 
+                                       VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+                                <Label Text="Contraseña:" Grid.Column="0" Grid.Row="4" FontSize="12" 
+                                       HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+                                <Entry Grid.Column="1" Grid.Row="4" Placeholder="Contraseña" x:Name="Password"
+                                       IsPassword="True" Text="{Binding Contraseña}"  FontSize="12"  
+                                       HorizontalOptions="FillAndExpand"/>
+                                <Label x:Name="lblErrorPassw" Text="{Binding ErrorPassw}" TextColor="Red" 
+                                       Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" 
+                                       VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+                                <Label x:Name="lblErrorGeneral" Text="{Binding ErrorLogin}" TextColor="Red" 
+                                       FontSize="10" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" 
+                                       VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+                                <StackLayout Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal"
+                                             HorizontalOptions="End">
+                                    <Button x:Name="btnClear" HorizontalOptions="End" FontSize="12" Text=" Limpiar "
+                                            BorderRadius="15" BorderColor="DarkBlue" TextColor="Black" Margin="0,0,5,0"
+                                            BackgroundColor="CadetBlue" />
+                                    <Button x:Name="btnLogin" HorizontalOptions="End" FontSize="12" Text=" Ingresar "
+                                            BorderRadius="15" BorderColor="DarkBlue" TextColor="Black"
+                                            BackgroundColor="CadetBlue" Margin="0,0,5,0" 
+                                            Command="{Binding LoginCommand}"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame.Content>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+            <ContentView IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray" Opacity="0.3">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="Navy"
+                                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}"
+                                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

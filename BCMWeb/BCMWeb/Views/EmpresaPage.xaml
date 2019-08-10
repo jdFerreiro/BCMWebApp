@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BCMWeb.Views.EmpresaPage">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="imgLogo" Grid.Column="0" />
+                        <Label Text="BCMWeb" FontSize="Medium" Grid.Column="1"/>
+                     </Grid>
+                    <StackLayout Orientation="Horizontal"
+                                     Grid.Column="0"
+                                     Grid.Row="1"
+                                     Grid.ColumnSpan="2"
+                                     HorizontalOptions="EndAndExpand">
+                        <Label Text="Usuario:" />
+                        <Label Text="{Binding Nombre}"/>
+                    </StackLayout>
+                    <Label Grid.Column="0"
+                               Grid.Row="2" 
+                               Text="Empresa"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand" />
+                    <Picker Grid.Column="1"
+                                Grid.Row="2"
+                                x:Name="cmbEmpresa"
+                                Title="Seleccione una empresa"
+                                HorizontalOptions="FillAndExpand"
+                                ItemsSource="{Binding Empresas}"
+                                SelectedItem="{Binding EmpresaSelected}"
+                                ItemDisplayBinding="{Binding Nombre}"/>
+                    <Label Grid.Column="0"
+                               Grid.Row="3" 
+                               Text="Módulo"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand" />
+                    <Picker Grid.Column="1"
+                                Grid.Row="3"
+                                x:Name="cmbModulo"
+                                Title="Seleccione un módulo"
+                                HorizontalOptions="FillAndExpand"
+                                ItemsSource="{Binding Modulos}"
+                                SelectedItem="{Binding ModuloSelected}"
+                                ItemDisplayBinding="{Binding Nombre}"/>
+                    <Label Grid.Column="0"
+                               Grid.Row="4" 
+                               Text="Tipo"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand" />
+                    <Picker Grid.Column="1"
+                                Grid.Row="4"
+                                x:Name="cmbTipoDoc"
+                                Title="Seleccione un tipo"
+                                HorizontalOptions="FillAndExpand"
+                                ItemsSource="{Binding TiposDocumento}"
+                                SelectedItem="{Binding TipoDocumentoSelected}"
+                                ItemDisplayBinding="{Binding Descripcion}"/>
+                    <Image Grid.Column="0"
+                               Grid.Row="5" 
+                               Grid.ColumnSpan="2"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Source="{Binding ImageUrl}" />
+                    <ScrollView Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Grid.Row="6"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+                        <Grid x:Name="grdBotones" 
+                                  HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand">
+                        </Grid>
+                    </ScrollView>
+                </Grid>
+            </ScrollView>
+            <ContentView IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray" Opacity="0.5">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="Navy"
+                                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}"
+                                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
