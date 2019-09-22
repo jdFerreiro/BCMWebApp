@@ -1143,24 +1143,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Karina\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj",
+      "projectUniqueName": "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj",
       "projectName": "BCMWeb.iOS",
-      "projectPath": "E:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj",
-      "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "E:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\obj\\",
+      "projectPath": "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj",
+      "packagesPath": "C:\\Users\\Karina\\.nuget\\packages\\",
+      "outputPath": "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Karina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1169,8 +1169,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://estagiranet.pkgs.visualstudio.com/_packaging/Estagiranet/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {

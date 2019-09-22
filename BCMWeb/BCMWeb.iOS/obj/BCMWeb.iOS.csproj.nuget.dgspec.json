@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj": {}
+  },
+  "projects": {
+    "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj",
+        "projectName": "BCMWeb.iOS",
+        "projectPath": "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\BCMWeb.iOS.csproj",
+        "packagesPath": "C:\\Users\\Karina\\.nuget\\packages\\",
+        "outputPath": "F:\\BequemDeco\\Repos\\BCMWebApp\\BCMWebApp\\BCMWeb\\BCMWeb.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Karina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "PCLStorage": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
+            "Xam.Plugin.Battery": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Xam.Plugin.DeviceInfo": {
+              "target": "Package",
+              "version": "[4.0.0.13, )"
+            },
+            "Xam.Plugins.DownloadManager": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[3.1.0.697729, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
